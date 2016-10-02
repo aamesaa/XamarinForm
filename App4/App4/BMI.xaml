@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.BMI">
+  <StackLayout Orientation="Vertical">
+    <Entry x:Name="Tinggi" Placeholder="Tinggi Badan"/>
+    <Entry x:Name="Berat" Placeholder="Berat Badan"/>
+    <Label Text="Masukkan Gender"/>
+    <Picker x:Name="pickerGender" Title="Gender"/>
+    <Button x:Name="BtnSubmit" Text="Submit"/>
+
+  </StackLayout>
+</ContentPage>

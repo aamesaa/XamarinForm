@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Lat1" >
+  <StackLayout>
+    <Label x:Name="eventValue" Text="Label"/>
+    <Label x:Name="pageValue" Text="Page Value"/>
+    
+    <Picker x:Name="picker" Title="Option" VerticalOptions="CenterAndExpand"/>
+    <TimePicker x:Name="timePicker" Format="T" VerticalOptions="CenterAndExpand"/>
+    <DatePicker x:Name="datePicker" Format="D" VerticalOptions="CenterAndExpand"/>
+    <Stepper x:Name="stepper" Minimum="0" Maximum="10" Increment="1" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+    <Slider x:Name="slide" Minimum="0" Maximum="100" Value="50"/>
+    <Switch x:Name="switch" HorizontalOptions="Center" VerticalOptions="CenterAndExpand"/>
+ 
+  </StackLayout>
+
+
+
+
+
+  <!--  <AbsoluteLayout>
+
+    <Label Text="I'm centered on iPhone 4 but no other device"
+           AbsoluteLayout.LayoutBounds="115,150,100,100" LineBreakMode="WordWrap" />
+
+    <Label Text="I'm bottom center on every device."
+           AbsoluteLayout.LayoutBounds=".5,1,.5,.1" AbsoluteLayout.LayoutFlags="All" LineBreakMode="WordWrap" />
+
+    <BoxView Color="Olive" AbsoluteLayout.LayoutBounds="1,.5, 25, 100" 
+             AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+    <BoxView Color="Red" AbsoluteLayout.LayoutBounds="0,.5,25,100"
+             AbsoluteLayout.LayoutFlags="PositionProportional" />
+
+    <BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".5,0,100,25"
+             AbsoluteLayout.LayoutFlags="PositionProportional" />
+  </AbsoluteLayout>
+
+   <RelativeLayout>
+      <BoxView Color="Red" x:Name="redBox" 
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+               Property=Height,Factor=.15,Constant=0}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent,
+               Property=Width,Factor=1,Constant=0}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent,
+               Property=Height,Factor=.8,Constant=0}" />
+
+      <BoxView Color="Blue" RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView,
+               ElementName=redBox,Property=Y,Factor=1,Constant=50}"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView,
+               ElementName=redBox,Property=X,Factor=1,Constant=50}"
+               RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToView,ElementName=redBox, 
+               Property=Width,Factor=.5,Constant=0}"
+               RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToView,ElementName=redBox,
+               Property=Height,Factor=.5,Constant=0}" />
+  </RelativeLayout>
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <StackLayout>
+    <StackLayout Spacing="0">
+      <Label Text="Posisi Start " HorizontalOptions="Start" BackgroundColor="Maroon"/>
+      <Label Text="Posisi Center" HorizontalOptions="Center" BackgroundColor="Navy"/>
+      <Label Text="End" HorizontalOptions="End" BackgroundColor="Purple"/>
+    </StackLayout>
+  <StackLayout Spacing="0" Orientation="Horizontal">
+    <Label Text="Posisi Start" HorizontalOptions="Start" BackgroundColor="Blue"/>
+    <Label Text="Posisi Center" HorizontalOptions="CenterAndExpand" BackgroundColor="Red"/>
+    <Label Text="Posisi End" HorizontalOptions="End" BackgroundColor="Aqua"/>
+  </StackLayout>
+  </StackLayout>
+  
+  -->
+</ContentPage>

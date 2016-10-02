@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.ListGbrBarang">
+  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+
+  <ListView x:Name="listGbrBrg" ItemsSource="{Binding daftarBarang}" RowHeight="80" HasUnevenRows="True">
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Horizontal">
+            <Image Source="{Binding foto}" WidthRequest="100" HeightRequest="100" />
+            <StackLayout Orientation="Vertical">
+              <Label VerticalOptions="Start" FontAttributes="Bold" Text="{Binding kodeBarang}"/>
+              <Label VerticalOptions="Start"  Text="{Binding namaBarang}" />
+              <Label VerticalOptions="Start"  Text="{Binding hrgJual}" />
+              <StackLayout Orientation="Horizontal">
+                <Button x:Name="btnBeli" Text="Beli" />
+                <Button x:Name="btnDetail" Text="Detail" />
+              </StackLayout>
+            </StackLayout>
+          </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+  </ListView>
+</ContentPage>
