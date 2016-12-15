@@ -5,6 +5,6 @@
   <StackLayout>
     <Label Text="Add New Category:" />
     <Entry x:Name="txtNamaKategori" Placeholder="nama kategori"/>
-    <Button x:Name="btnAdd" Text="Add" />
+    <Button x:Name="btnAdd" Text="Add Kategori" />
   </StackLayout>
 </ContentPage>
