@@ -14,7 +14,7 @@ namespace App4
             InitializeComponent();
 
             //MainPage = new App4.ListViewButton();
-             //MainPage = new NavigationPage(new BarangPage());
+            //MainPage = new NavigationPage(new BarangPage());
             MainPage = new MainPage();
         }
 
