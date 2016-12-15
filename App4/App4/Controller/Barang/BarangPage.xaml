@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.BarangPage">
+  <StackLayout Orientation="Vertical">
+    <StackLayout>
+      <Entry x:Name="txtCari" Placeholder="Search"/>
+      <StackLayout Orientation="Horizontal">
+       
+        <Picker x:Name="pickSearch" Title="Search By"/>
+        <Button x:Name="btnSearch" Text="Search"/>
+      </StackLayout>
+    </StackLayout>
+    <ListView x:Name="daftarBrg"  ItemsSource="{Binding daftarBrg}" RowHeight="200" >
+      <ListView.ItemTemplate>
+        <DataTemplate>
+          <ViewCell>
+            <StackLayout Orientation="Vertical" >
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Kode Barang : "/>
+                <Label Text="{Binding KodeBarang}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Id Jenis Motor : "/>
+                <Label Text="{Binding IdJenisMotor}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Kategori Id : "/>
+                <Label Text="{Binding KategoriID}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Nama Barang : "/>
+                <Label Text="{Binding Nama}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Stock : "/>
+                <Label Text="{Binding Stok}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Harga Beli : "/>
+                <Label Text="{Binding HargaBeli}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Harga Jual : "/>
+                <Label Text="{Binding HargaJual}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                <Label Text="Tgl Beli : "/>
+                <Label Text="{Binding TglBeli}"/>
+              </StackLayout>
+              <StackLayout Orientation="Horizontal">
+                
+                <Label Text="{Binding namaKategori}"/>
+              </StackLayout>
+            </StackLayout>
+          </ViewCell>
+        </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+    <Button x:Name="AddBrg" Text="Add Item"/>
+  </StackLayout>
+</ContentPage>

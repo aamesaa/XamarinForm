@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.BarangEditPage">
+  <StackLayout>
+    <Label Text="EDIT"/>
+      <Entry Text="{Binding KodeBarang}" IsEnabled="False" x:Name="txtKodeBrg" />
+  
+      <Label Text="Id Jenis Motor"/>
+      <Entry x:Name="TxtIdJns" Text="{Binding IdJenisMotor}"/>
+ 
+      <Label Text="txtKategory"/>
+      <Entry x:Name="txtKategoryId" Text="{Binding KategoriID}"/>
+  
+      <Label Text="Nama Barang"/>
+      <Entry x:Name="txtNama" Text="{Binding Nama}"/>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="Stok" HorizontalTextAlignment="Start"/>
+      <Entry x:Name="txtStok" Text="{Binding Stok}" Keyboard="Numeric" HorizontalTextAlignment="End"/>
+    </StackLayout>
+    <StackLayout Orientation="Horizontal">
+      <Label Text="HargaBeli"/>
+      <Entry x:Name="txtHargaBeli" Keyboard="Numeric" Text="{Binding HargaBeli}"/>
+    </StackLayout>
+      <Label Text="HargaJual"/>
+      <Entry x:Name="txtHargaJual" Keyboard="Numeric" Text="{Binding HargaJual}"/>
+  
+      <Label Text="Tanggal Beli"/>
+      <DatePicker x:Name="TglBeli" Date="{Binding TglBeli}"/>
+ 
+    <StackLayout Orientation="Horizontal">
+      <Button x:Name="btnEdit" Text="Edit" />
+      <Button x:Name="btnDelete" Text="Delete" />
+    </StackLayout>
+   
+  </StackLayout>
+</ContentPage>

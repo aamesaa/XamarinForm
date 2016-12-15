@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.BarangAddPage">
+  <StackLayout>
+    <Entry Placeholder="Kode Barang" x:Name="txtKodeBrg" />
+    <Entry x:Name="TxtIdJns" Placeholder="Id Jenis Motor" />
+    <Entry x:Name="txtKategoryId" Placeholder="Kategory ID" />
+    <Entry x:Name="txtNama" Placeholder="Nama Barang"/>
+    <Entry x:Name="txtStok"  Keyboard="Numeric" Placeholder="Stok"/>
+    <Entry x:Name="txtHargaBeli" Keyboard="Numeric" Placeholder="Harga Beli" />
+    <Entry x:Name="txtHargaJual" Keyboard="Numeric" Placeholder="Harga Jual"/>
+    <StackLayout  Orientation="Vertical">
+      <Label Text="Tanggal Beli"/>
+      <DatePicker x:Name="TglBeli"/>
+    </StackLayout>
+
+    <Button x:Name="btnAdd" Text="Add" />
+  </StackLayout>
+  
+</ContentPage>

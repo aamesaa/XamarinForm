@@ -1,4 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<!--
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:App4"
@@ -7,19 +9,54 @@
   <StackLayout Orientation="Vertical">
 
   </StackLayout>
+  <StackLayout Orientation="Vertical">
 
-<StackLayout Orientation="Vertical">
+  </StackLayout>
+  <StackLayout Orientation="Vertical">
     <Label Text="Bilangan 1 : "/>
     <Entry x:Name="EntryBil1" Placeholder="Masukkan bilangan 1"/>
-  
-   <Label Text="Bilangan 2 : "/>
+
+    <Label Text="Bilangan 2 : "/>
     <Entry x:Name="EntryBil2" Placeholder="Masukkan bilangan 2"/>
-  
+
     <Label Text="Operasi Matematika "/>
     <Button x:Name="btnTambah" Text="+" Clicked="btnTambah_Clicked" />
     <Button x:Name="btnKurang" Text="-" Clicked="btnKurang_Clicked"/>
     <Button x:Name="btnKali" Text="x" Clicked="btnKali_Clicked"/>
     <Button x:Name="btnBagi" Text=":" Clicked="btnBagi_Clicked"/>
-</StackLayout>
+  </StackLayout>
 
 </ContentPage>
+-->
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:App4"
+             x:Class="App4.MainPage">
+  <MasterDetailPage.Master>
+    <ContentPage Title="Menu">
+      <StackLayout Orientation="Vertical">
+        <Label Text="Toko"/>
+      </StackLayout>
+
+      <ListView x:Name="navDarwerList" >
+        <ListView.ItemTemplate>
+          <DataTemplate>
+            <ViewCell>
+              <StackLayout>
+                <Label Text="{Binding Title}"/>
+              </StackLayout>
+            </ViewCell>
+          </DataTemplate>
+          
+        </ListView.ItemTemplate>
+        
+      </ListView>
+      
+    </ContentPage>
+  </MasterDetailPage.Master>
+  <MasterDetailPage.Detail>
+    <NavigationPage>
+     
+    </NavigationPage>
+  </MasterDetailPage.Detail>
+  </MasterDetailPage>

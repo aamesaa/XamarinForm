@@ -4,42 +4,69 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
-
+using App4.Model;
 namespace App4
 {
+    /**
     public partial class MainPage : ContentPage
     {
         public MainPage()
         {
             InitializeComponent();
-            //List<string> lstGender = new List<string> { "Pria", "Wanita" };
-            //foreach (var gen in lstGender)
-            //{
-            //    pickerGender.Items.Add(gen); //<-- Buat nambahin/masukkin data di RadioBtn
-            //}
-            //BtnSubmit.Clicked += BtnSubmit_Clicked;
+            //btnTambah.Clicked += btnTambah_Clicked;
+            // btnKali.Clicked += btnKali_Clicked;
+            // btnBagi.Clicked += btnBagi_Clicked;
+            // btnKurang.Clicked += btnKurang_Clicked;
+            //DisplayAlert("Welcome", "hello", "OK");
+
         }
-
-
         private void btnTambah_Clicked(object sender, EventArgs e)
         {
             int a = Convert.ToInt32(EntryBil1.Text) + Convert.ToInt32(EntryBil2.Text);
-            DisplayAlert("Hasil", "Hasil penjumlahannya " + a.ToString(), "OK");
+            DisplayAlert("Hasil", a.ToString(), "OK");
         }
         private void btnKurang_Clicked(object sender, EventArgs e)
         {
             int b = (Convert.ToInt16(EntryBil1.Text)) - (Convert.ToInt16(EntryBil2.Text));
-            DisplayAlert("Hasil", "Hasil pengurangannya " + b, "OK");
+            DisplayAlert("Hasil", "Hasilnya" + b, "OK");
         }
-        private void btnKali_Clicked(object sender, EventArgs e)
+        private void btnKali_Clicked(Object sender, EventArgs e)
         {
             int c = Convert.ToInt32(EntryBil1.Text) * Convert.ToInt32(EntryBil2.Text);
-            DisplayAlert("Hasil", "Hasil perkaliannya " + c.ToString(), "OK");
+            DisplayAlert("Hasil", c.ToString(), "OK");
         }
         private void btnBagi_Clicked(object sender, EventArgs e)
         {
-            double a = Convert.ToDouble(EntryBil1.Text) / Convert.ToDouble(EntryBil2.Text);
-            DisplayAlert("Hasil", "Hasil pembagiannya " + a.ToString(), "OK");
+            int a = Convert.ToInt32(EntryBil1) / Convert.ToInt32(EntryBil2);
+            DisplayAlert("Hasil", a.ToString(), "OK");
         }
     }
 }
+**/
+public partial class MainPage : MasterDetailPage
+{
+    public MainPage()
+    {
+        InitializeComponent();
+        var item = new List<MasterPageItem>();
+        item.Add(new MasterPageItem{ Title = "Barang", TargetType = typeof(BarangPage) });
+        item.Add(new MasterPageItem{ Title = "Kategori", TargetType = typeof(KategoriPage) });
+        item.Add(new MasterPageItem{ Title = "Jenis", TargetType = typeof(JenisPage) });
+        
+        navDarwerList.ItemsSource = item;
+        Detail = new NavigationPage((Page)Activator.CreateInstance(typeof(KategoriPage)));
+        navDarwerList.ItemSelected += NavDarwerList_ItemSelected;
+    }
+
+    private void NavDarwerList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+        var item = (MasterPageItem)e.SelectedItem;
+        Type page = item.TargetType;
+        Detail = new NavigationPage((Page)Activator.CreateInstance(page));
+        IsPresented = false;
+    }
+
+    
+}
+}
+

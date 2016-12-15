@@ -13,7 +13,9 @@ namespace App4
         {
             InitializeComponent();
 
-            MainPage = new App4.ListGbrBarang();
+            //MainPage = new App4.ListViewButton();
+             //MainPage = new NavigationPage(new BarangPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()
